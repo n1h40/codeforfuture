@@ -1,0 +1,60 @@
+.playlists-container {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .playlist-section {
+    margin-bottom: 40px;
+  }
+  
+  .playlist-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
+  }
+  
+  .playlist-card {
+    background-color: #2a2a2a;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  .playlist-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .playlist-card h3 {
+    margin-top: 15px;
+    font-size: 1.2rem;
+    color: #fff;
+  }
+  
+  .playlist-card p {
+    margin-top: 10px;
+    color: #aaa;
+    font-size: 0.9rem;
+  }
+  
+  .spotify-link button {
+    background-color: #1db954; /* Spotify Green */
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 15px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+  }
+  
+  .spotify-link button:hover {
+    background-color: #1ed760; /* Slightly lighter green on hover */
+  }
+  
