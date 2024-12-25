@@ -1,28 +1,23 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header/Header';
-import Home from './components/Home/Home';
-import Store from './components/Store';
-import Basket from './components/Basket';
-import ErrorPage from './components/ErrorPage';
 import Footer from './components/Footer/Footer';
-import Playlists from './pages/Playlists/Playlists'
-import NewsPage from './components/Newspage';
+import Home from '../src/pages/Home/Home';
+import Store from './pages/Store/Store';
+import Basket from './pages/Basket/Basket';
+import ErrorPage from './pages/ErrorPage';
+import Playlists from './pages/Playlists/Playlists';
+import NewsPage from './pages/Newspage/Newspage';
+import MetalPlaylist from "./pages/Playlists/MetalPlaylist/MetalPlaylist";
+import RockPlaylist from "./pages/Playlists/RockPlaylist/RockPlaylist";
 
 const App = () => {
   const [basket, setBasket] = useState([]);
-  const [isDarkMode, setIsDarkMode] = useState(false);
-
-  const toggleTheme = () => {
-    setIsDarkMode((prevMode) => !prevMode);
-  };
-
-  const theme = isDarkMode ? 'dark' : 'light';
 
   return (
-    <div className={`app ${theme}`}>
+    <div className="app">
       <Router>
-        <Header toggleTheme={toggleTheme} isDarkMode={isDarkMode} />
+        <Header />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/store" element={<Store basket={basket} setBasket={setBasket} />} />
@@ -30,9 +25,10 @@ const App = () => {
           <Route path="*" element={<ErrorPage />} />
           <Route path="/playlists" element={<Playlists />} />
           <Route path="/news/:newsId" element={<NewsPage />} />
-
+          <Route path="/metal" element={<MetalPlaylist />} />
+          <Route path="/rock" element={<RockPlaylist />} />
         </Routes>
-        <Footer/>
+        <Footer />
       </Router>
     </div>
   );

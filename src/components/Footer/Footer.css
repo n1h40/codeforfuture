@@ -1,5 +1,148 @@
 footer {
-    background-color: red;
-    padding: 30px;
-    color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    color: red;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+footer h1 {
+    color: red;
+    font-size: 2.5em;
+    margin: 0;
+}
+
+.footerOne {
+    width: 70%;
+    padding: 25px;
+}
+
+.footerTwo {
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 10px;
+}
+
+.footerTwo a {
+    color: red;
+    margin: 0 5px;
+}
+
+.footerContainer {
+    height: 100%;
+}
+
+@media (max-width: 600px) {
+    footer {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    footer h1 {
+        font-size: 1.8em;
+    }
+
+    .footerOne {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .footerTwo {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .footerTwo a {
+        margin: 5px;
+    }
+}
+
+
+@media (min-width: 601px) and (max-width: 991px) {
+    footer {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    footer h1 {
+        font-size: 2.2em;
+    }
+
+    .footerOne {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .footerTwo {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .footerTwo a {
+        margin: 5px;
+    }
+}
+
+
+@media (min-width: 992px) and (max-width: 1440px) {
+    footer {
+        flex-direction: row;
+        padding: 25px;
+    }
+
+    footer h1 {
+        font-size: 2.5em;
+    }
+
+    .footerOne {
+        width: 70%;
+        padding: 25px;
+    }
+
+    .footerTwo {
+        width: 30%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        padding: 10px;
+    }
+
+    .footerTwo a {
+        margin: 0 5px;
+    }
+}
+
+
+@media (min-width: 1441px) and (max-width: 2000px) {
+    footer {
+        flex-direction: row;
+        padding: 30px;
+    }
+
+    footer h1 {
+        font-size: 3em;
+    }
+
+    .footerOne {
+        width: 70%;
+        padding: 30px;
+    }
+
+    .footerTwo {
+        width: 30%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        padding: 15px;
+    }
+
+    .footerTwo a {
+        margin: 0 10px;
+    }
 }

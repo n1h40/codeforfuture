@@ -5,6 +5,7 @@ import 'slick-carousel/slick/slick-theme.css';
 import image1 from '../../assets/Slipknot.jpg'
 import image2 from '../../assets/Metallica.jpg'
 import image3 from '../../assets/Linkin Park.webp'
+import image4 from '../../assets/The Beatles.jpg'
 
 
 const ImageSlider = () => {
@@ -23,6 +24,7 @@ const ImageSlider = () => {
     image1,
     image2,
     image3,
+    image4
   ];
 
   return (
